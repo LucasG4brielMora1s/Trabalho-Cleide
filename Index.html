@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGE - Painel do Aluno</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #f0f4f8;
+            color: #1e293b;
+            line-height: 1.5;
+        }
+        header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        header h1 { font-size: 1.5rem; font-weight: 600; }
+        .user-info { font-size: 0.95rem; opacity: 0.95; }
+        main {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            color: #1e3a8a;
+            border-left: 4px solid #3b82f6;
+            padding-left: 0.8rem;
+        }
+        .event-list {
+            display: grid;
+            gap: 1.2rem;
+        }
+        .event-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.4rem 1.6rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .event-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+        .event-info h3 {
+            font-size: 1.15rem;
+            color: #1e293b;
+            margin-bottom: 0.3rem;
+        }
+        .event-meta {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        .event-meta span { margin-right: 1rem; }
+        .btn-inscrever {
+            background: #22c55e;
+            color: white;
+            border: none;
+            padding: 0.65rem 1.4rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-inscrever:hover { background: #16a34a; }
+        .btn-inscrever:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SGE – Sistema de Gestão de Eventos</h1>
+        <div class="user-info">Aluno: João Silva | Turma: TI-3</div>
+    </header>
+
+    <main>
+        <h2>Próximos Eventos</h2>
+        <div class="event-list">
+            <div class="event-card">
+                <div class="event-info">
+                    <h3>Oficina de Python para Iniciantes <span class="badge">12 vagas</span></h3>
+                    <div class="event-meta">
+                        <span>📅 22/10/2026</span>
+                        <span>⏰ 14h às 17h</span>
+                        <span>📍 Lab 3</span>
+                        <span>⏱️ 3h</span>
+                    </div>
+                </div>
+                <button class="btn-inscrever">Inscrever-se</button>
+            </div>
+
+            <div class="event-card">
+                <div class="event-info">
+                    <h3>Palestra: Carreira em Dados <span class="badge">8 vagas</span></h3>
+                    <div class="event-meta">
+                        <span>📅 25/10/2026</span>
+                        <span>⏰ 19h às 21h</span>
+                        <span>📍 Auditório</span>
+                        <span>⏱️ 2h</span>
+                    </div>
+                </div>
+                <button class="btn-inscrever">Inscrever-se</button>
+            </div>
+
+            <div class="event-card">
+                <div class="event-info">
+                    <h3>Workshop de Design Thinking <span class="badge">Esgotado</span></h3>
+                    <div class="event-meta">
+                        <span>📅 28/10/2026</span>
+                        <span>⏰ 13h30 às 17h</span>
+                        <span>📍 Sala 12</span>
+                        <span>⏱️ 3,5h</span>
+                    </div>
+                </div>
+                <button class="btn-inscrever" disabled>Inscrever-se</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Escola Técnica – Sistema de Gestão de Eventos (SGE) | Desenvolvido com apoio de IA
+    </footer>
+</body>
+</html>
